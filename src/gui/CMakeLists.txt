@@ -10,5 +10,8 @@ target_link_libraries(Gui PUBLIC
     Data
 
     spdlog::spdlog
-    ${wxWidgets_LIBRARIES}
+    
+    wxbase
+    wxcore
+    wxnet
 )
