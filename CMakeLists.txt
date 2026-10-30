@@ -19,8 +19,17 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../bin")
 
 # --- Load third-party libraries --- #
 
+include(FetchContent)
+
 # spdlog
-find_package(spdlog REQUIRED)
+FetchContent_Declare(
+    spdlog
+    GIT_REPOSITORY https://github.com/gabime/spdlog.git
+    GIT_TAG v1.17.0
+    GIT_SHALLOW ON
+    FIND_PACKAGE_ARGS NAMES spdlog
+)
+FetchContent_MakeAvailable(spdlog)
 
 # Stb
 add_library(Stb STATIC
@@ -30,7 +39,15 @@ add_library(Stb STATIC
 target_include_directories(Stb PUBLIC ${CMAKE_SOURCE_DIR}/vendor)
 
 # WxWidgets
-find_package(wxWidgets REQUIRED CONFIG COMPONENTS net core base)
+set(wxBUILD_SHARED OFF)
+
+FetchContent_Declare(
+   wxWidgets
+   GIT_REPOSITORY https://github.com/wxWidgets/wxWidgets.git
+   GIT_TAG v3.3.4
+   GIT_SHALLOW ON
+)
+FetchContent_MakeAvailable(wxWidgets)
 
 # Load subdirectories
 add_subdirectory(src/data)
@@ -48,5 +65,7 @@ target_link_libraries(Main PRIVATE
     Gui
 
     # Vendor libraries
-    ${wxWidgets_LIBRARIES}
+    wxbase
+    wxcore
+    wxnet
 )
