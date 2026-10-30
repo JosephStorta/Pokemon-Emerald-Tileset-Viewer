@@ -13,7 +13,7 @@ This project parses the tileset format found in [this decompilation of Pokemon E
 Follow these steps to install and build the application:
 
 1. Clone the repository by either:
-    - Running `git clone https://github.com/JosephStorta/Pkmn-Emerald-Tileset-Viewer.git` from the terminal (if you have [Git](https://git-scm.com/install/windows) installed).
+    - Running `git clone https://github.com/JosephStorta/Pokemon-Emerald-Tileset-Viewer.git` from the terminal (if you have [Git](https://git-scm.com/install/windows) installed).
     - Going to `Code > Download ZIP` on this repository's web page then extracting the zipped contents.
 
 2. Create a directory for the build files, then from that directory run `cmake [root directory] && make`, replacing "[root directory]" with the relative path to the repository's root directory.  
