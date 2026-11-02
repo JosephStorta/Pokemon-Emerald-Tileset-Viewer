@@ -18,7 +18,7 @@ namespace viewer {
 namespace data {
 
 /**
- * @brief Parses tileset data into a Tileset object.
+ * @brief Parse tileset data into a Tileset object.
  * @param name The name of the tileset.
  * @return The parsed tileset data.
  */
@@ -41,7 +41,7 @@ Tileset* Parser::parse_tileset(const std::filesystem::path& tileset_path)
 }
 
 /**
- * @brief Parses the image data for the given tileset.
+ * @brief Parse image data for a given tileset.
  * @param tileset_path The folder containing the tileset data.
  * @return The parsed image data.
  */
@@ -70,7 +70,7 @@ ImageData* Parser::parse_image(const std::filesystem::path& tileset_path)
 }
 
 /**
- * @brief Parses the metatile data for the given tileset.
+ * @brief Parse metatile data for a given tileset.
  * @param tileset_path The folder containing the tileset data.
  * @return The parsed metatiles.
  */
@@ -141,7 +141,7 @@ std::vector<Metatile> Parser::parse_metatiles(const std::filesystem::path& tiles
 }
 
 /**
- * @brief Parses a single metatile from binary data.
+ * @brief Parse a single metatile from binary data.
  * @param data A byte array containing the metatile data.
  * @return The parsed metatile.
  */
@@ -174,7 +174,7 @@ Metatile Parser::parse_metatile(char data[])
 }
 
 /**
- * @brief Parses the palette data for the given tileset.
+ * @brief Parse palette data for a given tileset.
  * @param tileset_path The folder containing the tileset data.
  * @return The parsed palettes.
  */
@@ -203,7 +203,7 @@ std::vector<Palette> Parser::parse_palettes(const std::filesystem::path& tileset
 }
 
 /**
- * @brief Parses the given palette file.
+ * @brief Parse a given palette file.
  * @param palette_file The palette file to parse.
  * @return The parsed palette.
  */

@@ -37,7 +37,7 @@ TilesetView::TilesetView(wxWindow* parent)
 }
 
 /**
- * @brief Prompts the user for a tileset folder to load.
+ * @brief Prompt the user for a tileset folder to load.
  */
 data::Tileset* TilesetView::load_tileset()
 {
@@ -87,7 +87,7 @@ data::Tileset* TilesetView::load_tileset()
 }
 
 /**
- * @brief Triggered when the "Apply Palette" checkbox is toggled.
+ * @brief Triggered when the `Apply Palette?` checkbox is toggled.
  * @param event 
  */
 void TilesetView::on_palette_check(wxCommandEvent& event)
@@ -99,7 +99,7 @@ void TilesetView::on_palette_check(wxCommandEvent& event)
 }
 
 /**
- * @brief Triggered when the "Palette" spin control is spun.
+ * @brief Triggered when the `Palette` spin control is spun.
  * @param event 
  */
 void TilesetView::on_palette_spin(wxSpinEvent& event)
@@ -110,7 +110,7 @@ void TilesetView::on_palette_spin(wxSpinEvent& event)
 }
 
 /**
- * @brief Enables or disables the palette spinbox based on the state of the apply palette checkbox.
+ * @brief Enable or disable the palette spinbox based on the state of the `Apply Palette?` checkbox.
  */
 void TilesetView::update_spinbox()
 {
@@ -118,7 +118,7 @@ void TilesetView::update_spinbox()
 }
 
 /**
- * @brief Applies a color palette to the tileset image.
+ * @brief Apply a color palette to a tileset image.
  */
 void TilesetView::update_palette()
 {
@@ -153,7 +153,7 @@ void TilesetView::update_palette()
 }
 
 /**
- * @brief Creates and arranges GUI widgets.
+ * @brief Create and arrange GUI widgets.
  */
 void TilesetView::create_gui()
 {

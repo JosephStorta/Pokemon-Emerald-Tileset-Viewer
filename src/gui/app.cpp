@@ -23,7 +23,7 @@ enum MenuItem
 
 /**
  * @brief Responsible for initializing the application.
- * @return True on successful initialization, false if otherwise.
+ * @return `true` on successful initialization, `false` if otherwise.
  */
 bool App::OnInit()
 {
@@ -48,7 +48,7 @@ MainFrame::MainFrame()
 }
 
 /**
- * @brief Functionality for the "File > Hello" menu item.
+ * @brief Functionality for the `File > Hello` menu item.
  * @param event 
  */
 void MainFrame::on_open(wxCommandEvent& event)
@@ -62,7 +62,7 @@ void MainFrame::on_open(wxCommandEvent& event)
 }
 
 /**
- * @brief Functionality for the "File > Exit" menu item.
+ * @brief Functionality for the `File > Exit` menu item.
  * @param event 
  */
 void MainFrame::on_exit(wxCommandEvent& event)
@@ -71,7 +71,7 @@ void MainFrame::on_exit(wxCommandEvent& event)
 }
 
 /**
- * @brief Functionality for the "Help > About" menu item.
+ * @brief Functionality for the `Help > About` menu item.
  * @param event 
  */
 void MainFrame::on_about(wxCommandEvent& event)
@@ -84,7 +84,7 @@ void MainFrame::on_about(wxCommandEvent& event)
 }
 
 /**
- * @brief Creates and arranges GUI widgets.
+ * @brief Create and arrange GUI widgets.
  */
 void MainFrame::create_gui()
 {
@@ -131,7 +131,7 @@ void MainFrame::create_gui()
 }
 
 /**
- * @brief Creates and populates the menu bar.
+ * @brief Create and populate the menu bar.
  */
 void MainFrame::create_menu_bar()
 {

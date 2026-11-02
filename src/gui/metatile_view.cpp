@@ -22,6 +22,10 @@ MetatileView::MetatileView(wxWindow* parent)
     create_gui();
 }
 
+/**
+ * @brief Generate the metatiles for a given tileset.
+ * @param tileset The tileset data to read from.
+ */
 void MetatileView::load_metatiles(const data::Tileset* tileset)
 {
     if (!tileset)
@@ -59,6 +63,10 @@ void MetatileView::load_metatiles(const data::Tileset* tileset)
     m_bitmap_scroll->SetScrollRate(5, 5);
 }
 
+/**
+ * @brief Create a metatile image from metatile data and base tileset data.
+ * @return Created metatile image.
+ */
 wxImage MetatileView::create_metatile(const data::Metatile& metatile_data, const wxImage& tileset_image, const data::Tileset* tileset_data)
 {
     wxImage metatile_image(16, 16, true);
@@ -152,6 +160,9 @@ wxImage MetatileView::create_metatile(const data::Metatile& metatile_data, const
     return metatile_image;
 }
 
+/**
+ * @brief Create and arrange GUI widgets.
+ */
 void MetatileView::create_gui()
 {
    // --- Top-level --- //
